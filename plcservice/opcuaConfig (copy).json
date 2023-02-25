@@ -1,0 +1,7 @@
+{
+    "Int":"ns=2;b=DB_Datalog_TVS.Test_int" ,   
+    "Double":"ns=1;b=1020FFAA",
+    "string":"ns=1;b=1020FFAB",
+    "Byte":"ns=1;b=1020FFAC",
+    "Int32":"ns=1;b=1020FFAD"
+}

@@ -1,0 +1,28 @@
+{
+    "plc_count":[0],
+    "plc_config":[
+        {
+            "name":"plc-1",
+            "endpointurl":"opc.tcp://HTLP0002:4334/UA/MyLittleServer",
+            "refresh_rate":"200",
+            "Tags":{
+                "stn1_Double":"ns=1;b=1020FFAA",
+                "stn1_string":"ns=1;b=1020FFAB",
+                "stn2_Byte":"ns=1;b=1020FFAC",
+                "stn2_Int32":"ns=1;b=1020FFAD"
+            }
+           
+        },
+        {
+            "name":"plc-2",
+            "refresh_rate":"200",
+            "Tags":{
+                "stn1_string":"ns=1;b=1020FFAB",
+                "stn2_Byte":"ns=1;b=1020FFAC",
+                "stn2_Int32":"ns=1;b=1020FFAD",
+                "stn1_Double":"ns=1;b=1020FFAA"
+            }
+           
+        }
+    ]   
+}
