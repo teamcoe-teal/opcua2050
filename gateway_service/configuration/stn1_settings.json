@@ -1,0 +1,21 @@
+{
+  "machine_code": { "stn101": "101","stn102": "102"},
+  "line_code": "Proj_Bat",
+  "plant_code": "Teal_SVT01",
+  "company_code": "Teal_SVT",
+  "operator_ID": "1",
+  "rework_parts": "0",
+  "classification": "M",
+  "rejection_reason": "reason",
+  "machine_status": "5",
+  "live_alarm": "0",
+  "live_loss": "0",
+  "type": "Auto",
+  "storage_limit": "100",
+  "no_of_alarm": 28,
+  "bit": 8,
+  "bitReversal": false,
+  "total_index": 2,
+  "numberof_fixtures": 1,
+  "no_of_tools": 2
+}

@@ -1,0 +1,36 @@
+{
+  "name": "plcconnect",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "fast-csv": "^4.3.6",
+    "fetch-node": "^0.0.1",
+    "fs": "^0.0.1-security",
+    "ftp": "^0.3.10",
+    "internet-available": "^1.0.0",
+    "moment": "^2.29.4",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.19",
+    "nodes7": "^0.3.17",
+    "os": "^0.1.2",
+    "path": "^0.12.7",
+    "request": "^2.88.2",
+    "sequelize": "^6.21.3",
+    "store2": "^2.14.2",
+    "systeminformation": "^5.12.6",
+    "xlsx": "^0.18.5"
+  }
+}
