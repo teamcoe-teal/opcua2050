@@ -24,7 +24,7 @@ const stn_setting=require('../configuration/stn1_settings.json')
                 }
               });
           }
-      });
+      });// update the loss the new task
     } catch (error) {
       datalogger.dataLog("Loss","lossStarttime","stn","loss starttime stored",error);
       // datalogger.dataLog("Loss lossStarttime func",error);

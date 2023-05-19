@@ -18,12 +18,11 @@ var noOfTools=stn_setting.no_of_tools
     if(!jsonData){
         jsonData= readjsontoolfile();
     console.log(jsonData);
-
     }
     if (key) {
         if (!jsonData[`Stn_${machinecode}`]) 
                 {
-                    jsonData[`Stn_${machinecode}`] = {}
+                    jsonData[`Stn_${machinecode}`] = {}//stn_op10 { tool_1: 20, tool_2:50 }
                     jsonData[`Stn_${machinecode}`][`${key}_${tool}`] = data
                 }
                 else {
@@ -36,6 +35,7 @@ var noOfTools=stn_setting.no_of_tools
     }
     }
     globalVariableUpdate()
+
         function readjsontoolfile() {   
             const dataa = fs.readFileSync('configuration/configtool.json')
             const d = dataa.toString()
@@ -67,11 +67,11 @@ var noOfTools=stn_setting.no_of_tools
             var toolTags=[];
             var toolResetTags=[];
             for(var i=1;i<=noOfTools;i++){
-                toolTags.push(val["tool"+i])
-                toolResetTags.push(val["toolreset"+i])
+                toolTags.push(val["tool"+i])//[tool1,tool2,tool3]
+                toolResetTags.push(val["toolreset"+i])//[toolreset1,toolreset2,toolreset3]
             }
             timeStamp=moment().format('YYYY-MM-DDTHH:mm:ss.SSS')
-            var tempToolResetTag=store.get('toolReset'+stn)
+            var tempToolResetTag=store.get('toolReset'+stn)//
             if(tempToolResetTag!==null && JSON.stringify(tempToolResetTag)!==JSON.stringify(toolResetTags)){
             toolResetTags.map((data,index)=>{
                 if(data){

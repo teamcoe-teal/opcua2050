@@ -1,4 +1,3 @@
-const {OPCUAClient, AttributeIds, StatusCode, check_flag}=require('node-opcua')
 const plc = require('./plcRead')
 const stn_settings = require('./configuration/opcuaConfig-teal.json')
 

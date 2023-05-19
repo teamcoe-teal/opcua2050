@@ -79,12 +79,12 @@ function generateMachineStatus(connection,val,alarm,loss,shift,machineCode,date,
 function onchange(plcvalues,Date,Alarm,Loss,Machinestatus,shift,machinecode,stn){
     var errActive=plcvalues?.error_active;
     var machineStatus=Machinestatus;
-    var tempErrActive=store.get('errActive'+stn);
+    var tempErrActive=store.get('errActive'+stn);// local store data
     var tempMachinestatus=store.get('machineStatus'+stn);
     if(tempErrActive!==null && tempMachinestatus!==null){
     if(machineStatus!==tempMachinestatus){
-    ctrl.exportData(Date,Alarm,Loss,Machinestatus,shift,machinecode,0,0)
-	console.log("testing  :",machinecode)
+    ctrl.exportData(Date, Alarm, Loss, Machinestatus, shift, machinecode, 0, 0)
+	console.log("testing:", machinecode)
     }
 }
     store.set('errActive'+stn,errActive);

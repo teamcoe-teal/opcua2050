@@ -21,7 +21,6 @@ app.listen(`${port}`,()=>{
 exports.plcReadData = async function (plcinfo){
 const endpointUrl=plcinfo.IP
 client[plcinfo.name]  = OPCUAClient.create({endpointMustExist:false})
-
 client[plcinfo.name].on("backoff",(retry,delay)=>{
     console.log(`try to connect ${endpointUrl},retry ${retry} next attemt in ${delay/1000} sec`)
     if (retry) {

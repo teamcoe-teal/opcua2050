@@ -92,7 +92,7 @@ async  function valuesReady(){
       });
 }
     clearInterval(interval)
-    var interval=setInterval(rawCalc.refre,settings.raw_csv_refresh_rate) 
+    var interval=setInterval(rawCalc.refre, settings.raw_csv_refresh_rate) // callback funcation, time interval  
     clearInterval(cycle)
     var cycle=setInterval(cycleCalc.refreshing,settings.cycle_csv_refresh_rate) 
     clearInterval(ccycle)

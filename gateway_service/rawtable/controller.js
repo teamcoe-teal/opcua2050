@@ -83,7 +83,7 @@ try {
         .write(jsonData) 
           .on("finish", function () {
           })
-          .pipe(ws);
+      .pipe(ws);
       });
       // console.log("csv file created ","stn"+stn+"_"+ftpconfig.filename);
     } catch (error) {        
@@ -91,7 +91,7 @@ try {
     }
   }
 
-  exports. pushFile = async (stn) => {
+  exports. pushFile = async (stn) => {// api to front end
     try
     {
           const res = await axios({

@@ -8,7 +8,7 @@ const { clearInterval } = require('timers');
 var totalIndex = stn_setting.total_index;
 var refreshrate = settings.critical_csv_refresh_rate;
 
-exports.checkOperation= async function(values,stn){
+exports.checkOperation = async function(values,stn){
 // console.log(stn);
   var tempOperationBitTag=store.get("operationBitTag"+stn) || [false, false, false];
         var tempTotalParts=store.get("tempTotalParts"+stn);

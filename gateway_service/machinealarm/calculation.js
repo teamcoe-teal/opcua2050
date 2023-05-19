@@ -36,15 +36,15 @@ exports.machineAlarm=async function(val,stn){
         if(tempAlarm==null){
             tempAlarm=array
         }
-    alarmWord.forEach((element,index)=>{
+    alarmWord.forEach((element,index)=>{//[AlmWord_1, AlmWord_2,...AlmWord_28] [0, 1,2,3,.. 27]
     binaryConvertion=Number(element).toString(2);
     tempBinaryConvertion=Number(tempAlarm[index]).toString(2);
     // console.log("binaryconvert",binaryConvertion)
-    var reverse=[...binaryConvertion].reverse().join("");
-    var tempReverse=[...tempBinaryConvertion].reverse().join("");
+    var reverse= [...binaryConvertion].reverse().join("");//AlmWord_28, AlmWord_27,...AlmWord_1
+    var tempReverse=[...tempBinaryConvertion].reverse().join("");//array format "[...tempBinaryConvertion]"
     // console.log("reverse",reverse)
-    padding=String(reverse).padEnd(bit, '0');
-    tempPadding=String(tempReverse).padEnd(bit, '0');
+    padding=String(reverse).padEnd(bit, '0');//10101010111//11101010101
+    tempPadding=String(tempReverse).padEnd(bit, '0'); //AlmWord_28, AlmWord_27,...AlmWord_1
     // console.log("padding",padding)
     if(bitReverasal==true){
         padding=String(reverse).padStart(bit, '0');
@@ -170,13 +170,13 @@ async function exportDataAlert(alarm,loss,machinestatus,shift,machineCode,almS,l
        });      
      if(AlertRawTable.data=="Successfully valid"){ 
         datalogger.successdataLog("MachineAlarm","exportDataAlert",machineCode,"rowbased/api/Values/InsertAlertRawTable",AlertRawTable.data);
-     }  
+     }  // Successfully valid
      else{
         datalogger.dataLog("MachineAlarm","exportDataAlert",machineCode,"rowbased/api/Values/InsertAlertRawTable",AlertRawTable.data);
-     } 
+     } //api response error 
      }catch(error){
         datalogger.dataLog("MachineAlarm","exportDataAlert",machineCode,"rowbased/api/Values/InsertAlertRawTable",error);
- }
+ } // funcation error 
  }
 
 
